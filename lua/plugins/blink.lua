@@ -22,8 +22,8 @@ return {
         opts = {
             keymap = {
                 preset = "enter",
-                ["<Tab>"] = { "select_next", "fallback" },
-                ["<S-Tab>"] = { "select_prev", "fallback" },
+                ["<C-n>"] = { "select_next", "fallback" },
+                ["<C-p>"] = { "select_prev", "fallback" },
             },
 
             appearance = {
