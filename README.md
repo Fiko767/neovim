@@ -15,12 +15,13 @@ git clone https://github.com/Fiko767/neovim.git ~/.config/nvim/
 ## **📁 Structur**
 
 The config is using the `lazy.nvim` package manager.
-
+```
 ~/.config/nvim/
 ├── init.lua
 └── lua/
     ├── catppuccin.lua
     └── tree-sitter.lua
+```
 
 ## **🛠 Plugins**
 
