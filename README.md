@@ -12,7 +12,7 @@
 git clone https://github.com/Fiko767/neovim.git ~/.config/nvim/
 ```
 
-## **📁 Structur**
+## **📁 Structure**
 
 The config is using the `lazy.nvim` package manager.
 ```
