@@ -13,6 +13,7 @@ return {
             "rafamadriz/friendly-snippets",
             "moyiz/blink-emoji.nvim",
             "ray-x/cmp-sql",
+            "Kaiser-Yang/blink-cmp-avante",
         require("blink").setup({
                 provider = "avante",
                 auto_trigger = true,
@@ -34,7 +35,7 @@ return {
             signature = { enabled = true },
 
             sources = {
-                default = { "lsp", "path", "snippets", "buffer", "emoji", "sql" },
+                default = { "avante", "lsp", "path", "snippets", "buffer", "emoji", "sql" },
                 providers = {
                     emoji = {
                         module = "blink-emoji",
@@ -54,6 +55,11 @@ return {
                             return vim.o.filetype == "sql"
                         end,
                     },
+                    avante = {
+                        module = "blink-cmp-avante",
+                        name = "Avante",
+                        opts = {}
+                    }
                 },
             },
 
