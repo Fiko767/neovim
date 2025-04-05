@@ -49,6 +49,17 @@ map("n", "<leader>h", ":nohlsearch<CR>")
 
 map("i", "jj", "<Esc>")
 
+-- For Copilot
+map("n", "<leader>ac", ":CopilotChat<CR>")
+map("v", "<leader>ae", ":CopilotChatExplain<CR>")
+map("v", "<leader>ar", ":CopilotChatReview<CR>")
+map("v", "<leader>af", ":CopilotChatFix<CR>")
+map("v", "<leader>ao", ":CopilotChatOptimize<CR>")
+map("v", "<leader>ad", ":CopilotChatDocs<CR>")
+map("v", "<leader>at", ":CopilotChatTests<CR>")
+map("v", "<leader>am", ":CopilotChatCommit<CR>")
+map("n", "<leader>am", ":CopilotChatCommit<CR>")
+
 require("lazy").setup("plugins")
 
 return {}
