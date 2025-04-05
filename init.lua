@@ -8,6 +8,12 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+map = function(mode, lhs, rhs, opts)
+    opts = opts or {}
+    opts.silent = opts.silent ~= false
+    vim.keymap.set(mode, lhs, rhs, opts)
+end
+
 vim.g.mapleader = " "
 
 vim.opt.tabstop = 4
@@ -15,20 +21,31 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+
 vim.opt.autoindent = true
-vim.opt.autoindent = true
+
 vim.opt.clipboard = "unnamedplus"
 
-map = function(mode, lhs, rhs, opts)
-  opts = opts or {}
-  opts.silent = opts.silent ~= false
-  vim.keymap.set(mode, lhs, rhs, opts)
-end
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
 
-map("n", "<leader>w", ":w<CR>") 
-map("n", "<leader>q", ":q<CR>") 
-map("n", "<leader>x", ":wqa<CR>") 
-map("n", "<leader>h", ":nohlsearch<CR>") 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.incsearch = true
+vim.opt.hlsearch = false
+
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+vim.opt.undofile = true
+
+map("n", "<leader>w", ":w<CR>")
+map("n", "<leader>q", ":q<CR>")
+map("n", "<leader>x", ":wqa<CR>")
+map("n", "<leader>h", ":nohlsearch<CR>")
 
 map("i", "jj", "<Esc>")
 
