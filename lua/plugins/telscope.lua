@@ -11,10 +11,10 @@ return {
                 sorting_strategy = "ascending",
                 layout_strategy = "horizontal",
                 layout_config = { width = 0.75, preview_cutoff = 120 },
-            extensions = {
+                extensions = {
                     file_browser = {}
                 },
-            pickers = {
+                pickers = {
                     find_files = {
                         hidden = true
                     }
@@ -32,4 +32,3 @@ return {
         map("n", "<leader>fd", ":Telescope file_browser<CR>")
     end,
 }
-

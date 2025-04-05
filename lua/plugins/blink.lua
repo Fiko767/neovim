@@ -14,7 +14,7 @@ return {
             "moyiz/blink-emoji.nvim",
             "ray-x/cmp-sql",
             "Kaiser-Yang/blink-cmp-avante",
-        require("blink").setup({
+            require("blink").setup({
                 provider = "avante",
                 auto_trigger = true,
             })
