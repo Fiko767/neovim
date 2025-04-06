@@ -16,6 +16,8 @@ end
 
 vim.g.mapleader = " "
 
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4

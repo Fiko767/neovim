@@ -8,9 +8,9 @@ return {
             },
             win_options = {
                 signcolumn = "yes:2",
-            }
+            },
         })
         require("oil-git-status").setup()
         map("n", "-", ":Oil<CR>")
-    end
+    end,
 }

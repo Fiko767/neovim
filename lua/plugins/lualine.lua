@@ -7,7 +7,7 @@ return {
                 theme = "catppuccin",
                 section_separators = "",
                 component_separators = "",
-            }
+            },
         })
-    end
+    end,
 }

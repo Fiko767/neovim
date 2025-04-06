@@ -15,7 +15,7 @@ return {
                     LineNr = { fg = colors.lavender },
                     CursorLineNr = { fg = colors.rosewater, style = { "bold" } },
                 }
-            end
+            end,
         })
         vim.cmd.colorscheme("catppuccin")
     end,
