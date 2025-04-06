@@ -3,9 +3,15 @@ return {
     config = function()
         local null_ls = require("null-ls")
         null_ls.setup({
-            null_ls.builtins.formatting.stylua,
+            sources = {
+                null_ls.builtins.formatting.stylua,
+                null_ls.builtins.formatting.goimports,
+                null_ls.builtins.formatting.gofumpt,
+            },
         })
 
-        map("n", "<leader>gf", vim.lsp.buf.format)
-    end
+        vim.keymap.set("n", "<leader>gf", function()
+            vim.lsp.buf.format({ async = true })
+        end, { desc = "Format code" })
+    end,
 }
