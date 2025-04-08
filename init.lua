@@ -1,22 +1,23 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git", "clone", "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git", lazypath
-    })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		lazypath,
+	})
 end
 
 vim.opt.rtp:prepend(lazypath)
 
 map = function(mode, lhs, rhs, opts)
-    opts = opts or {}
-    opts.silent = opts.silent ~= false
-    vim.keymap.set(mode, lhs, rhs, opts)
+	opts = opts or {}
+	opts.silent = opts.silent ~= false
+	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 vim.g.mapleader = " "
-
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
