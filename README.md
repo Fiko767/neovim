@@ -28,16 +28,13 @@ The config is using the `lazy.nvim` package manager.
 If you want to add your own plugins, simply create a `.lua` file inside the `lua/plugins` directory.
 All configurations, including keybindings, are defined in the corresponding `.lua` file for each plugin.
 
-## **🤖 Avante (AI Integration)**
-
-Avante is an AI-powered plugin for Neovim.
-By default, this configuration uses Gemini-2.0-Flash as the AI provider because the [Gemini API key is free to claim.](https://ai.google.dev/gemini-api/docs/api-key)
-If you prefer to use **ChatGPT** or **Claude**, refer to the official Avante [repo](https://github.com/yetone/avante.nvim) 
+# Github Copilot AI 
+I use Github Copilot AI for code suggestions and completions.
+The keybinds for copilot always start with <leader>a.
 
 ## **💬 Feedback and Issues**
 
-- 💡 **Have ideas for improvements?**  
-  Start a [discussion](https://github.com/Fiko767/neovim/discussions/new?category=ideas) and share your thoughts!
+This project uses the GitHub Copilot Neovim plugin to enhance coding productivity and provide AI-assisted code suggestions.
 
 - 🐞 **Found a bug or issue?**  
   Report it in the [issue tracker](https://github.com/Fiko767/neovim/issues).
