@@ -14,5 +14,16 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+function map(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.noremap = true  -- Verhindert rekursive Tastenkombinationen
+  opts.silent = true   -- Unterdrückt die Anzeige der Befehle
+  vim.keymap.set(mode, lhs, rhs, opts)
+end
+
+vim.g.mapleader = " "
+
 require("core")
 require("lazy").setup({{ import = "plugins" }})
+
+return {}
