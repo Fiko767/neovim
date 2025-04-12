@@ -5,6 +5,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("v", "jj", "<Esc>")
 
+vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
+
 -- Nvim-Tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 
