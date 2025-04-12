@@ -19,3 +19,6 @@ vim.keymap.set("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")
 vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>")
 vim.keymap.set("n", "<leader>fgf", "<cmd>Telescope git_files<CR>")
 vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<CR>")
+
+-- Lazygit
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>")
