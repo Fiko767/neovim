@@ -3,9 +3,15 @@ return {
 	config = function()
 		require("lint").linters_by_ft = {
 			lua = { "luacheck" },
-			python = { "flake8" },
+			python = { "pylint" },
 			rust = { "bacon" },
 			javascript = { "eslint_d" },
+			css = { "stylelint" },
+			c = { "cppcheck" },
+			cpp = { "cppcheck" },
+			yaml = { "actionlint" },
+			go = { "golangci-lint" },
+			markdown = { "markdownlint" },
 		}
 	end,
 }
