@@ -50,6 +50,10 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Telescope live_grep<CR>")
 vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
 
+-- Telescop Extensions
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<CR>")
+vim.keymap.set("n", "<leader>fe", "<cmd>Telescope emoji<CR>")
+
 -- Telescope git
 vim.keymap.set("n", "<leader>fgb", "<cmd>Telescope git_branches<CR>")
 vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>")

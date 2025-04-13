@@ -1,7 +1,10 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
+		-- Extensions
 		"nvim-telescope/telescope-file-browser.nvim",
+		"xiyaowong/telescope-emoji.nvim",
+
 		"nvim-lua/plenary.nvim",
 	},
 	config = function()
@@ -9,6 +12,8 @@ return {
 			extensions = {
 				file_browser = {
 					hijack_netrw = true,
+					hidden = true,
+					no_ignore = true,
 				},
 			},
 			defaults = {
@@ -22,5 +27,6 @@ return {
 			},
 		})
 		require("telescope").load_extension("file_browser")
+		require("telescope").load_extension("emoji")
 	end,
 }
