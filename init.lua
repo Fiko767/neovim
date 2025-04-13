@@ -16,8 +16,8 @@ vim.opt.rtp:prepend(lazypath)
 
 function map(mode, lhs, rhs, opts)
 	opts = opts or {}
-	opts.noremap = true -- Verhindert rekursive Tastenkombinationen
-	opts.silent = true -- Unterdrückt die Anzeige der Befehle
+	opts.noremap = true
+	opts.silent = true
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 

@@ -1,22 +1,26 @@
 return {
-	{
+	"nvim-telescope/telescope.nvim",
+	dependencies = {
 		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-lua/plenary.nvim",
-		},
+		"nvim-lua/plenary.nvim",
 	},
-	{
-		"nvim-telescope/telescope.nvim",
-		config = function()
-			require("telescope").setup({
-				extensions = {
-					file_browser = {
-						hijack_netrw = true,
-					},
+	config = function()
+		require("telescope").setup({
+			extensions = {
+				file_browser = {
+					hijack_netrw = true,
 				},
-			})
-			require("telescope").load_extension("file_browser")
-		end,
-	},
+			},
+			defaults = {
+				file_ignore_patterns = { "%.git/" },
+			},
+			pickers = {
+				find_files = {
+					hidden = true,
+					no_ignore = true,
+				},
+			},
+		})
+		require("telescope").load_extension("file_browser")
+	end,
 }
