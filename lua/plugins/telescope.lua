@@ -4,6 +4,10 @@ return {
 		-- Extensions
 		"nvim-telescope/telescope-file-browser.nvim",
 		"xiyaowong/telescope-emoji.nvim",
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
 
 		"nvim-lua/plenary.nvim",
 	},
@@ -20,6 +24,12 @@ return {
 						vim.api.nvim_put({ emoji.value }, "c", false, true)
 					end,
 				},
+				fzf = {
+					fuzzy = true,
+					override_generic_sorter = true,
+					override_file_sorter = true,
+					case_mode = "smart_case",
+				},
 			},
 			defaults = {
 				file_ignore_patterns = { "%.git/" },
@@ -33,5 +43,6 @@ return {
 		})
 		require("telescope").load_extension("file_browser")
 		require("telescope").load_extension("emoji")
+		require("telescope").load_extension("fzf")
 	end,
 }
