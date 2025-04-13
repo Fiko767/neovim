@@ -60,3 +60,18 @@ vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<CR>")
 vim.keymap.set("n", "<leader>ng", "<cmd>Neogit<CR>")
 vim.keymap.set("n", "<leader>nc", "<cmd>NeogitCommit<CR>")
 vim.keymap.set("n", "<leader>nl", "<cmd>NeogitLogCurrent<CR>")
+
+-- Gitsigns
+vim.keymap.set("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>")
+vim.keymap.set("n", "<leader>gn", "<cmd>Gitsigns next_hunk<CR>")
+vim.keymap.set("n", "<leader>gp", "<cmd>Gitsigns prev_hunk<CR>")
+
+vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<CR>")
+vim.keymap.set("n", "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<CR>")
+vim.keymap.set("n", "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>")
+vim.keymap.set("n", "<leader>gS", "<cmd>Gitsigns stage_buffer<CR>")
+vim.keymap.set("n", "<leader>gr", "<cmd>Gitsigns reset_hunk<CR>")
+vim.keymap.set("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>")
+
+vim.keymap.set("n", "<leader>gP", "<cmd>Gitsigns preview_hunk<CR>")
+vim.keymap.set("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>")
