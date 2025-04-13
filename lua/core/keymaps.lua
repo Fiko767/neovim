@@ -75,3 +75,10 @@ vim.keymap.set("n", "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>")
 
 vim.keymap.set("n", "<leader>gP", "<cmd>Gitsigns preview_hunk<CR>")
 vim.keymap.set("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>")
+
+-- Barbar
+vim.keymap.set("n", "<A-h>", "<cmd>BufferPrevious<CR>")
+vim.keymap.set("n", "<A-l>", "<cmd>BufferNext<CR>")
+vim.keymap.set("n", "<A-,>", "<cmd>BufferMovePrevious<CR>")
+vim.keymap.set("n", "<A-.>", "<cmd>BufferMoveNext<CR>")
+vim.keymap.set("n", "<A-q>", "<cmd>BufferClose<CR>")
