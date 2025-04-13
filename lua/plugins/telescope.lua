@@ -15,6 +15,11 @@ return {
 					hidden = true,
 					no_ignore = true,
 				},
+				emoji = {
+					action = function(emoji)
+						vim.api.nvim_put({ emoji.value }, "c", false, true)
+					end,
+				},
 			},
 			defaults = {
 				file_ignore_patterns = { "%.git/" },
