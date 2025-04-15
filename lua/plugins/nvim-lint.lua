@@ -4,7 +4,7 @@ return {
 		require("lint").linters_by_ft = {
 			lua = { "luacheck" },
 			python = { "pylint" },
-			rust = { "bacon" },
+			rust = { "clippy" },
 			javascript = { "eslint_d" },
 			css = { "stylelint" },
 			c = { "cppcheck" },
