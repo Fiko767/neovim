@@ -26,4 +26,10 @@ vim.opt.splitright = true
 
 vim.opt.termguicolors = true
 
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	severity_sort = true,
+})
+
 vim.o.clipboard = "unnamedplus"
