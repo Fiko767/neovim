@@ -55,6 +55,16 @@ vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>")
 vim.keymap.set("n", "<leader>fgf", "<cmd>Telescope git_files<CR>")
 vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<CR>")
 
+-- Aider
+vim.keymap.set("n", "<leader>At", "<cmd>Aider toggle<CR>")
+vim.keymap.set("n", "<leader>As", "<cmd>Aider send<CR>")
+vim.keymap.set("v", "<leader>As", "<cmd>Aider send<CR>")
+vim.keymap.set("n", "<leader>Ac", "<cmd>Aider command<CR>")
+vim.keymap.set("n", "<leader>Ab", "<cmd>Aider buffer<CR>")
+vim.keymap.set("n", "<leader>Aa", "<cmd>Aider add<CR>")
+vim.keymap.set("n", "<leader>Ad", "<cmd>Aider drop<CR>")
+vim.keymap.set("n", "<leader>Aar", "<cmd>Aider add readonly<CR>")
+
 -- Neogit
 vim.keymap.set("n", "<leader>ng", "<cmd>Neogit<CR>")
 vim.keymap.set("n", "<leader>nc", "<cmd>NeogitCommit<CR>")
