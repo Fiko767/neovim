@@ -81,3 +81,8 @@ vim.keymap.set("n", "<A-l>", "<cmd>BufferNext<CR>")
 vim.keymap.set("n", "<A-,>", "<cmd>BufferMovePrevious<CR>")
 vim.keymap.set("n", "<A-.>", "<cmd>BufferMoveNext<CR>")
 vim.keymap.set("n", "<A-q>", "<cmd>BufferClose<CR>")
+
+-- Supermaven
+vim.keymap.set("n", "<leader>St", "<cmd>SupermavenToggle<CR>")
+vim.keymap.set("n", "<leader>Sc", "<cmd>SupermavenClearLog<CR>")
+vim.keymap.set("n", "<leader>Ss", "<cmd>SupermavenStatus<CR>")
