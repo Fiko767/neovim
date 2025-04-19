@@ -8,8 +8,23 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
 		},
-
 		"nvim-lua/plenary.nvim",
+	},
+	keys = {
+		{ "<leader>ff", "<cmd>Telescope find_files<CR>" },
+		{ "<leader>fr", "<cmd>Telescope live_grep<CR>" },
+		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>" },
+		{ "<leader>fb", "<cmd>Telescope buffers<CR>" },
+
+		-- Telescop Extensions
+		{ "<leader>fb", "<cmd>Telescope file_browser<CR>" },
+		{ "<leader>fe", "<cmd>Telescope emoji<CR>" },
+
+		-- Telescope git
+		{ "<leader>fgb", "<cmd>Telescope git_branches<CR>" },
+		{ "<leader>fgc", "<cmd>Telescope git_commits<CR>" },
+		{ "<leader>fgf", "<cmd>Telescope git_files<CR>" },
+		{ "<leader>fgs", "<cmd>Telescope git_status<CR>" },
 	},
 	config = function()
 		require("telescope").setup({

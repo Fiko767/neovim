@@ -32,4 +32,11 @@ vim.diagnostic.config({
 	severity_sort = true,
 })
 
+default = {
+	keymaps = {
+		slient = true,
+		noremap = true,
+	},
+}
+
 vim.o.clipboard = "unnamedplus"

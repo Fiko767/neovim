@@ -3,6 +3,9 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
+	keys = {
+		{ "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
+	},
 	config = function()
 		require("nvim-tree").setup({
 			sync_root_with_cwd = true,
