@@ -19,7 +19,6 @@ return {
 			ensure_installed = {
 				"luacheck",
 				"pylint",
-				"bacon",
 				"eslint_d",
 				"stylelint",
 				"cpplint",
