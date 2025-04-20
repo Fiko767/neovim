@@ -35,8 +35,3 @@ vim.keymap.set("n", "<leader>le", vim.diagnostic.open_float)
 vim.keymap.set("n", "<leader>lq", vim.diagnostic.setqflist)
 vim.keymap.set("n", "<leader>ln", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>lp", vim.diagnostic.goto_prev)
-
--- Supermaven
-vim.keymap.set("n", "<leader>St", "<cmd>SupermavenToggle<CR>")
-vim.keymap.set("n", "<leader>Sc", "<cmd>SupermavenClearLog<CR>")
-vim.keymap.set("n", "<leader>Ss", "<cmd>SupermavenStatus<CR>")
