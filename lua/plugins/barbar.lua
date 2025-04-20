@@ -5,11 +5,11 @@ return {
 		"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
 	},
 	keys = {
-		{ "<A-h>", "<cmd>BufferPrevious<CR>" },
-		{ "<A-l>", "<cmd>BufferNext<CR>" },
-		{ "<A-,>", "<cmd>BufferMovePrevious<CR>" },
-		{ "<A-.>", "<cmd>BufferMoveNext<CR>" },
-		{ "<A-q>", "<cmd>BufferClose<CR>" },
+		{ "<Leader>bh", "<cmd>BufferPrevious<CR>" },
+		{ "<Leader>bl", "<cmd>BufferNext<CR>" },
+		{ "<Leader>bH", "<cmd>BufferMovePrevious<CR>" },
+		{ "<Leader>bL", "<cmd>BufferMoveNext<CR>" },
+		{ "<Leader>bd", "<cmd>BufferClose<CR>" },
 	},
 	event = { "BufAdd", "BufReadPre" },
 	init = function()
