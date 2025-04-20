@@ -4,15 +4,15 @@
 
 This is my personal Neovim configuration, so it might not suit everyone's taste. The setup includes all the basic features like syntax highlighting, LSP, and more.
 
-I use the [lazy.nvim](https://github.com/folke/lazy.nvim) packet manager.
+I use the [lazy.nvim](https://github.com/folke/lazy.nvim) package manager.
 
 ## Installation
 
-| Depency       | Reason                     |
+| Dependency    | Reason                     |
 | ------------- | -------------------------- |
 | Neovim        | This should be obvious     |
-| Git           | To clone everthing         |
-| Nerd Font     | For all the speacial icons |
+| Git           | To clone everything        |
+| Nerd Font     | For all the special icons  |
 | luarocks, npm | To download the LSP        |
 | fzf           | For telescope (fzf-native) |
 
@@ -42,6 +42,19 @@ Adding your own plugins is easy. Just create a new file in `lua/plugins/plugin.l
 │   │   └── tree-sitter.lua
 └── init.lua
 ```
+
+### AI
+
+I am using these plugins for AI:
+
+- [Avante](https://github.com/yetone/avante.nvim)
+- [Aider](https://aider.chat)
+- [Aider.nvim](https://github.com/GeorgesAlkhouri/nvim-aider)
+
+The keymaps for AI are:
+
+- `<leader>A` - For Aider
+- `<leader>a` - For Avante
 
 ### Keybinds ⌨
 
