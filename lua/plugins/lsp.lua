@@ -7,24 +7,12 @@ return {
 	},
 	-- from AI
 	keys = {
-		{ "K", vim.lsp.buf.hover, desc = "Hover Documentation" },
 		{ "gd", vim.lsp.buf.definition, desc = "Go to Definition" },
-		{ "gD", vim.lsp.buf.declaration, desc = "Go to Declaration" },
-		{ "gi", vim.lsp.buf.implementation, desc = "Go to Implementation" },
-		{ "gr", vim.lsp.buf.references, desc = "Go to References" },
-		{ "<leader>ls", vim.lsp.buf.signature_help, desc = "Signature Help" },
 
-		{ "<leader>la", vim.lsp.buf.code_action, desc = "Code Action" },
-		{ "<leader>lr", vim.lsp.buf.rename, desc = "Rename Symbol" },
-		{ "gT", vim.lsp.buf.type_definition, desc = "Go to Type Definition" },
+		{ "<leader>ls", vim.lsp.buf.signature_help, desc = "Signature Help" },
 
 		{ "<leader>lS", vim.lsp.buf.workspace_symbol, desc = "Workspace Symbols" },
 		{ "<leader>ld", vim.lsp.buf.document_symbol, desc = "Document Symbols" },
-
-		{ "[d", vim.diagnostic.goto_prev, desc = "Previous Diagnostic" },
-		{ "]d", vim.diagnostic.goto_next, desc = "Next Diagnostic" },
-		{ "<leader>le", vim.diagnostic.open_float, desc = "Show Line Diagnostics" },
-		{ "<leader>lq", vim.diagnostic.setqflist, desc = "Diagnostic Quickfix List" },
 	},
 	config = function()
 		require("mason-tool-installer").setup({
