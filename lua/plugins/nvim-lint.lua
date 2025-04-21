@@ -12,6 +12,8 @@ return {
 			yaml = { "actionlint" },
 			go = { "golangci-lint" },
 			markdown = { "markdownlint" },
+			json = { "jsonlint" },
+			jsonc = { "jsonlint" },
 		}
 	end,
 }
