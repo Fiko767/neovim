@@ -12,7 +12,7 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
-vim.keymap.set("n", "<C-H>", "<C-w>h")
+vim.keymap.set("n", "<C-H>", "<C-w>H")
 vim.keymap.set("n", "<C-J>", "<C-w>J")
 vim.keymap.set("n", "<C-K>", "<C-w>K")
 vim.keymap.set("n", "<C-L>", "<C-w>L")
