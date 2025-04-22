@@ -4,8 +4,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>wqa<CR>")
 
 vim.keymap.set("i", "jj", "<Esc>")
 
-vim.keymap.set("n", "<leader>t", "<cmd>terminal<CR>")
-
 -- Navigate windows
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")

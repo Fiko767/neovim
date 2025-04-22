@@ -3,6 +3,7 @@ return {
 	cmd = "Aider",
 	dependencies = {
 		"nvim-tree/nvim-tree.lua",
+		"folke/snacks.nvim",
 	},
 	keys = {
 		{ "<leader>At", "<cmd>Aider toggle<CR>" },
