@@ -39,4 +39,7 @@ default = {
 	},
 }
 
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
+
 vim.o.clipboard = "unnamedplus"

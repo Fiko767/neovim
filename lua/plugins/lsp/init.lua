@@ -1,4 +1,5 @@
 return {
+	require("plugins.lsp.cmp-git"),
 	require("plugins.lsp.cmp"),
 	require("plugins.lsp.conform"),
 	require("plugins.lsp.lspsaga"),

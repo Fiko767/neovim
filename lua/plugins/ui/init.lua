@@ -2,6 +2,7 @@ return {
 	require("plugins.ui.alpha"),
 	require("plugins.ui.huez"),
 	require("plugins.ui.indent-blankline"),
+	require("plugins.ui.lspkind"),
 	require("plugins.ui.lualine"),
 	require("plugins.ui.markdown-preview"),
 	require("plugins.ui.which-key"),

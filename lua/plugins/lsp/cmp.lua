@@ -2,9 +2,22 @@ return {
 	"hrsh7th/nvim-cmp",
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-calc",
+		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-cmdline",
+		"hrsh7th/cmp-emoji",
+		"saadparwaiz1/cmp_luasnip",
+		"ray-x/cmp-treesitter",
+		"f3fora/cmp-spell",
+		"petertriho/cmp-git",
+
+		"onsails/lspkind-nvim",
 	},
 	config = function()
 		local cmp = require("cmp")
+		local lspkind = require("lspkind")
+
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
@@ -25,11 +38,54 @@ return {
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 
+			formatting = {
+				format = lspkind.cmp_format({
+					mode = "symbol_text",
+					ellipsis_char = "...",
+				}),
+			},
+
+			-- Configure completion sources with priority
 			sources = cmp.config.sources({
-				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
-			}, {
+				{ name = "luasnip" },
 				{ name = "buffer" },
+				{ name = "treesitter" },
+				{ name = "path" },
+				{ name = "git" },
+				{ name = "calc" },
+				{ name = "emoji" },
+				{
+					name = "spell",
+					option = {
+						keep_all_entries = false,
+						enable_in_context = function()
+							return true
+						end,
+						preselect_correct_word = true,
+					},
+				},
+			}),
+
+			cmp.setup.cmdline("/", {
+				mapping = cmp.mapping.preset.cmdline(),
+				sources = {
+					{ name = "buffer" },
+				},
+			}),
+
+			cmp.setup.cmdline(":", {
+				mapping = cmp.mapping.preset.cmdline(),
+				sources = cmp.config.sources({
+					{ name = "path" },
+				}, {
+					{
+						name = "cmdline",
+						option = {
+							ignore_cmds = { "Man", "!" },
+						},
+					},
+				}),
 			}),
 		})
 	end,
