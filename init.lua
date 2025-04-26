@@ -24,6 +24,6 @@ end
 vim.g.mapleader = " "
 
 require("core")
-require("lazy").setup({ { import = "plugins" } })
+require("lazy").setup({ require("plugins") })
 
 return {}
