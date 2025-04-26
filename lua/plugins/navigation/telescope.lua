@@ -8,6 +8,8 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
 		},
+		"nvim-telescope/telescope-media-files.nvim",
+
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
@@ -16,7 +18,7 @@ return {
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>" },
 		{ "<leader>fb", "<cmd>Telescope buffers<CR>" },
 
-		-- Telescop Extensions
+		-- Telescope Extensions
 		{ "<leader>fb", "<cmd>Telescope file_browser<CR>" },
 		{ "<leader>fe", "<cmd>Telescope emoji<CR>" },
 
@@ -45,6 +47,10 @@ return {
 					override_file_sorter = true,
 					case_mode = "smart_case",
 				},
+				media_files = {
+					filetypes = { "png", "webp", "jpg", "jpeg", "mp4", "webm", "ogv", "gif", "pdf" },
+					find_cmd = "rg",
+				},
 			},
 			defaults = {
 				file_ignore_patterns = { "%.git/" },
@@ -59,5 +65,6 @@ return {
 		require("telescope").load_extension("file_browser")
 		require("telescope").load_extension("emoji")
 		require("telescope").load_extension("fzf")
+		require("telescope").load_extension("media_files")
 	end,
 }
