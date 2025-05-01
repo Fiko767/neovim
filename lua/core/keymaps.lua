@@ -1,19 +1,35 @@
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
-vim.keymap.set("n", "<leader>x", "<cmd>wqa<CR>")
+local map = map
 
-vim.keymap.set("i", "jj", "<Esc>")
+local opts = { noremap = true, silent = true }
+
+vim.g.mapleader = " "
+
+map("n", "<leader>w", "<cmd>w<CR>", opts)
+map("n", "<leader>q", "<cmd>q<CR>", opts)
+map("n", "<leader>x", "<cmd>wqa<CR>", opts)
+
+map("i", "jj", "<Esc>", opts)
 
 -- Navigate windows
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
+
+-- Resize with arrows
+map("n", "<C-Up>", ":resize +2<CR>", opts)
+map("n", "<C-Down>", ":resize -2<CR>", opts)
+map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate in insert mode
-vim.keymap.set("i", "<C-h>", "<Left>")
-vim.keymap.set("i", "<C-j>", "<Down>")
-vim.keymap.set("i", "<C-k>", "<Up>")
-vim.keymap.set("i", "<C-l>", "<Right>")
+map("i", "<C-h>", "<Left>", opts)
+map("i", "<C-j>", "<Down>", opts)
+map("i", "<C-k>", "<Up>", opts)
+map("i", "<C-l>", "<Right>", opts)
 
-vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>")
+map("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
+
+-- Stay in indent mode
+map("v", "<", "<gv", opts)
+map("v", ">", ">gv", opts)

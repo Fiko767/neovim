@@ -21,8 +21,6 @@ function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
-vim.g.mapleader = " "
-
 require("core")
 require("lazy").setup({ require("plugins") })
 
